@@ -2,8 +2,8 @@ def r():
     def b(): 
         try:
             b = input("Enter a binary number: ")
-            d = int(binary, 2)
-            h = hex(decimal)
+            d = int(b, 2)
+            h = hex(d)
             print(f"Binary: {b}")
             print(f"Decimal: {d}")
             print(f"Hexadecimal: {h[2:].upper()}")
