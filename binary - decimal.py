@@ -1,30 +1,51 @@
-print("Welcome to Binary - Decimal converter") 
-
 def r():
-    def bd(): 
+    def b(): 
         try:
-            binary = input("Enter a binary number: ")
-            decimal = int(binary, 2)
-            print(f"The decimal value of {binary} is {decimal}")
+            b = input("Enter a binary number: ")
+            d = int(binary, 2)
+            h = hex(decimal)
+            print(f"Binary: {b}")
+            print(f"Decimal: {d}")
+            print(f"Hexadecimal: {h[2:].upper()}")
         except ValueError:
             print("That is not a valid binary number!")
-    def db(): 
+    def d(): 
         try:
             d = int(input("Enter a decimal number: "))
-            b = bin(d)[2:]
-            print(f"The binary value of {d} is {b}")
+            b = bin(d)
+            h = hex(d)
+            print(f"Binary: {b[2:]}")
+            print(f"Decimal: {d}")
+            print(f"Hexadecimal: {h[2:].upper()}")
         except ValueError:
             print("That is not a valid decimal number!")
 
+    def h(): 
+        try:
+            h = input("Enter a hexadecimal number: ")
+            d = int(h, 16)
+            b = bin(d)
+            print(f"Binary: {b[2:]}")
+            print(f"Decimal: {dl}")
+            print(f"Hexadecimal: {h.upper()}")
+        except ValueError:
+            print("That is not a valid hexadecimal number!")
     
     try:
-        way = int(input("Enter 1 for Binary to Decimal. Enter 2 for Decimal to Binary. "))
-        if way == 1:
+        print("Welcome to Binary - Decimal - Hexadecimal converter") 
+        i = int(input("Choose your input format. Press 1 for Binary, 2 for Decimal, and 3 for Hexadecimal. "))
+        if i == 1:
             while True:
-                bd()
-        elif way ==2:
+                b()
+        elif i == 2:
             while True: 
-                db()
+                d()
+        elif i == 3:
+            while True: 
+                h()
+        else: 
+            print("Invalid Choice")
+            r()
     except ValueError:
         print("Enter a valid value")
         r()
