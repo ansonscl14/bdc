@@ -7,8 +7,10 @@ def r():
             print(f"Binary: {b}")
             print(f"Decimal: {d}")
             print(f"Hexadecimal: {h[2:].upper()}")
+            b()
         except ValueError:
             print("That is not a valid binary number!")
+            r()
     def d(): 
         try:
             d = int(input("Enter a decimal number: "))
@@ -17,8 +19,10 @@ def r():
             print(f"Binary: {b[2:]}")
             print(f"Decimal: {d}")
             print(f"Hexadecimal: {h[2:].upper()}")
+            d()
         except ValueError:
             print("That is not a valid decimal number!")
+            r()
 
     def h(): 
         try:
@@ -28,8 +32,10 @@ def r():
             print(f"Binary: {b[2:]}")
             print(f"Decimal: {dl}")
             print(f"Hexadecimal: {h.upper()}")
+            h()
         except ValueError:
             print("That is not a valid hexadecimal number!")
+            r()
     
     try:
         print("Welcome to Binary - Decimal - Hexadecimal converter") 
